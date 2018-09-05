@@ -64,3 +64,25 @@ export const videoAssets: IVideoAsset[] = [
         overlay: false
     }
 ];
+
+export interface IBlockchainAsset {
+    leftTop: string[];
+    rightTop: string[];
+    leftBottom: string[];
+    rightBottom: string[];
+}
+
+export interface IBlockchainTheme {
+    name: string;
+    assets: IBlockchainAsset;
+}
+
+export const blockchainThemes: IBlockchainTheme[] = [{
+    name: 'theme1',
+    assets: {
+        leftTop: ['steven-1.jpg', 'alain-1.jpg', 'jorinde-1.jpg', 'edwin-1.jpg', 'kat-1.jpg'],
+        rightTop: ['steven-2.jpg', 'alain-2.jpg', 'jorinde-2.jpg', 'edwin-2.jpg', 'kat-2.jpg'],
+        leftBottom: ['steven-3.jpg', 'alain-3.jpg', 'jorinde-3.jpg', 'edwin-3.jpg', 'kat-3.jpg'],
+        rightBottom: ['steven-4.jpg', 'alain-4.jpg', 'jorinde-4.jpg', 'edwin-4.jpg', 'kat-4.jpg']
+    }
+}];

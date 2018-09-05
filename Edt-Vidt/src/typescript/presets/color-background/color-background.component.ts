@@ -41,7 +41,6 @@ export class ColorBackgroundComponent extends Vue {
 
         this.singleColorSubscription = Actions$.vidtSingleColor
             .subscribe((color: IColor) => {
-
                 const rgbColors = this.getRGBColors([color]);
                 this.setStyles(rgbColors);
             });
