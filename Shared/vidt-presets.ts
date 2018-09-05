@@ -13,6 +13,7 @@ vidtPresets.set(10, '/video');
 vidtPresets.set(11, '/vista');
 vidtPresets.set(12, '/color-twinkle');
 vidtPresets.set(13, '/karaoke');
+vidtPresets.set(14, '/blockchain');
 
 export enum animationTypes {
     bounce = 'bounce',

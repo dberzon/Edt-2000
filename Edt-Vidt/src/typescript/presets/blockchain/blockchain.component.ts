@@ -1,4 +1,3 @@
-import * as _ from 'lodash';
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 import { blockchainThemes, IBlockchainTheme } from '../../../../../Shared/assets';
@@ -11,18 +10,15 @@ import { blockchainThemes, IBlockchainTheme } from '../../../../../Shared/assets
 })
 
 export class BlockchainComponent extends Vue {
-    private themes: IBlockchainTheme[] = blockchainThemes;
+    private themes = blockchainThemes;
 
-    private selectedAssets: IBlockchainTheme|undefined;
+    private selectedTheme: IBlockchainTheme = this.themes[0];
     private theme: string = 'theme1';
 
     mounted() {
-        this.selectedAssets = _.find(this.themes, ['name', this.theme]);
-
-        if(!this.selectedAssets) {
-            return;
-        }
-
+        console.log('theme 1', this.themes[0]);
+        this.selectedTheme = this.themes.find(item => item.name === this.theme) || this.themes[0];
+        console.log(this.selectedTheme);
         this.setAssets();
     }
 
